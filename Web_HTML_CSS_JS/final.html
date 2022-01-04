@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/final.js"></script>
+    <title>Final</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .form__control {
+            margin: 0 auto;
+            width:1120px
+        }
+        .row {
+            display: flex;
+            width: 100%;
+            
+        }
+        .btn__check  {
+            display: flex;
+            margin : 0 auto;
+            width:1120px;
+            margin-top: 2rem;
+        }
+        
+        .table form{
+            justify-content:space-around
+        }
+        .form-group label {
+            display: block;
+            padding: 0.3rem 0;
+            box-sizing: border-box;
+        }
+        .form-group {
+            margin-right: 3rem;
+        }
+        .gender {
+            display: flex;
+            margin-right: 2rem;
+        }
+        .form-group select,
+        .form-group input {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0.5rem;
+        }
+        .showtable {
+            margin-top: 2rem;
+            width: 1120px;
+            margin: 0 auto;
+        }
+        table { 
+        margin-top: 3rem;
+        text-align: start;
+        width:1120px
+         }
+         table, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+                }
+    </style>
+</head>
+
+<body>
+    <div class="form__control container">
+        <form>
+           <div class="row">
+                <div class="form-group">
+                    <label for="fname">Name</label>
+                    <input type="text" id="getname" placeholder="Full Name"  name="fname" />
+                </div>
+                <div  class="form-group">
+                    <label>Giới Tính</label>
+                    <div class ="gender">
+                        <label class="gender">Nam
+                            <input id="getgender" value ="1" type="radio" name="radio">
+                        </label> 
+                        <label class="gender">Nữ
+                            <input id="getgender" value ="2" type="radio" name="radio">
+                        </label>
+                        <label class="">khác
+                            <input id="getgender" value ="3" type="radio" name="radio">
+                        </label>
+                        </div>
+                    </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input id="getdate" type="date" class="form__input">
+                </div>
+                <div  class="form-group">
+                    <label for="height">Chiều Cao</label>
+                    <input  id="getheight" type="text" placeholder="Chiều Cao - Mét" name="fname" />
+                </div>
+                <div class="form-group">
+                    <label for="weight">Cân Nặng</label>
+                    <input id="getweight" type="text" placeholder="Cân Nặng -Kg "  name="fname" />
+                </div>
+           </div>
+        </form>
+        
+    </div>
+    <div class="btn__check container">
+        <button onClick="addInfo()">Kiểm tra sức khỏe</button>
+    </div>
+   <div class="showtable">
+        <table>
+            <thead>
+                <th>STT</th>
+                <th>Họ và tên</th>
+                <th>Giới tính</th>
+                <th>Tuổi</th>
+                <th>Chiều Cao</th>
+                <th>Cân Nặng</th>
+                <th>Chỉ Số BMI</th>
+                <th>Cân Nặng- Kg</th>
+                <th>Tình Trạng Sức Khỏe</th>
+            </thead>
+            <tbody id="result">
+                
+            </tbody>
+        </table>
+   </div>
+</body>
+
+</html>

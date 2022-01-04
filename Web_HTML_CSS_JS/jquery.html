@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="jqurey.js"></script>
+    <title>Document</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .header h3 {
+            text-align: center;
+        }
+        .container {
+            max-width: 1140px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        .info {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        }
+        .group__1 {
+            display: flex;
+            width :calc(50% - 10px );
+        }
+        .point {
+            display: flex;
+        }
+       
+        .group__2 {
+            display:flex;
+            flex-direction: column; 
+            width :calc(85% - 20px );
+            margin-right: 3rem;
+        }
+        .form__input {
+            padding: 1rem;
+            width: 100%;
+        }
+        .group__2 .form__input::placeholder {
+            text-align: right;
+        }
+        .group__2 .form__input{
+            text-align:right;
+        }
+        .btn {
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            
+        }
+        .btn button {
+            padding: 1rem;
+            font-weight: bold
+        }
+        .colors {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+            font-weight: bold;
+        }
+        .choncolor {
+            display: flex;
+        }
+        table th {
+            text-align:left
+        }
+         table th{
+            border-bottom: 2px solid black;
+         }
+    </style>
+</head>
+<body>
+    <div class ="container colors">
+      <div class="choncolor">
+            <div>Màu Chữ ( Text Color ): </div>
+            <div>
+                <label >Đen
+                    <input  id="blackText" value ="1" type="radio" name="radio">
+                </label> 
+                <label >Đỏ
+                    <input id="redText" value ="2" type="radio" name="radio">
+                </label>
+            </div>
+      </div>
+      <div class="choncolor">
+            <div>Màu Nền( Background Color ): </div>
+            <div>
+                <label >None (white)
+                    <input id="none"value ="1" type="radio" name="radio">
+                </label> 
+                <label >Xanh lá cây (#28a745)
+                    <input id="orangeBg" value ="2" type="radio" name="radio">
+                </label>
+                <label >Cam (#ff6347)
+                    <input id="greenBg" value ="2" type="radio" name="radio">
+                </label>
+            </div>
+      </div>
+    </div>
+    <div class="header">
+        <h3 class="title">Thông Tin Học Viên</h3>
+    </div>
+       <div class="container info">
+        <div class="group__1">
+           <form>
+            <label for="Full Name"></label> Họ và Tên Học</label>
+            <input class="form__input" placeholder ="Họ và tên học viên"
+            type="text" id="name" name="fname"/>
+           </form>
+        </div>
+        <div class="group__1">
+           <form id="form">
+            <label for="mobile">Lớp Học</label>
+            <select name='lop' class="form__input" id="selectClass"> 
+                <option value=""> --Chọn Lớp Học-- </option>
+                <option value="1">FED 01</option>
+                <option value="2">FED 02</option>
+            </select>
+            <input class="form__input" placeholder ="Họ và tên học viên"
+            type="text" id="name" name="fname"/>
+           </form>
+        </div>
+    </div>
+    <div class="header">
+        <h3 class="title">Thông Tin Điểm Môn Học</h3>
+    </div>
+    <div id="infoMark" class="container point">
+        <div class="group__2">
+            <label for="Full Name">HTML & CSS</label>
+            <input class="form__input" placeholder ="HTML & CSS"
+            type="text" id="html" name="fname" />
+        </div>
+        <div class="group__2">
+            <label for="mobile">Javascript</label>
+            <input   id="java"placeholder="Javascript"class="form__input">
+        </div>
+        <div class="group__2">
+            <label for="mobile">Jquery</label>
+            <input placeholder ="Jquery"class="form__input" id="jque">
+        </div>
+    </div>
+    <div class="btn container">
+        <button id="subbmit">Lưu Thông Tin</button>
+    </div>
+    <table class="table container">
+        <thead>
+            <th>Họ Và Tên</th>
+            <th>Lớp Học</th>
+            <th>HTML & CSS</th>
+            <th>Javascript</th>
+            <th>Jquery</th>
+            <th>Đ.TB</th>
+        </thead>
+        <tbody id="result">
+        </tbody>
+    </table>
+</body>
+</html>
